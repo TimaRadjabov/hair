@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Futura PT Demi';
+	src: url('../fonts/futura_pt_demi.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/futura_pt_demi.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/futura_pt_demi.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/futura_pt_demi.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/futura_pt_demi.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/futura_pt_demi.svg#futura_pt_demi') format('svg'); /* Chrome < 4, Legacy iOS */
+}
