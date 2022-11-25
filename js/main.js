@@ -333,58 +333,37 @@ if ($('#thanks2-body').length > 0) {
     newDate();
 }
 
-$(".sixth__slider").slick({
-	infinite: false,
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	prevArrow:
-	  '<div class="arrow__left"></div>',
-	nextArrow:
-	  '<div class="arrow__right"></div>',
-	responsive: [
-	  {
-		 breakpoint: 767,
-		 settings: {
-			slidesToShow: 1,
-			slidesToScroll: 1,
-
-		 },
-	  },
-	],
- });
-
  // Tab
- const tabBtn = document.querySelectorAll(".tenth__btn");
- const tabMap = document.querySelectorAll(".tenth__map");
- const tabMapContent = document.querySelectorAll(".tenth__content");
- function tabChanger(item, content, map) {
-	item.forEach((tab, index) => {
-	   tab.addEventListener('click', function(){
-		  content.forEach(content => {
-			 content.classList.remove('active');
-		  })
-		  item.forEach(tab => {
-			 tab.classList.remove('active');
-		  })
+//  const tabBtn = document.querySelectorAll(".tenth__btn");
+//  const tabMap = document.querySelectorAll(".tenth__map");
+//  const tabMapContent = document.querySelectorAll(".tenth__content");
+//  function tabChanger(item, content, map) {
+// 	item.forEach((tab, index) => {
+// 	   tab.addEventListener('click', function(){
+// 		  content.forEach(content => {
+// 			 content.classList.remove('active');
+// 		  })
+// 		  item.forEach(tab => {
+// 			 tab.classList.remove('active');
+// 		  })
 		
-		  map.forEach(tab => {
-			 tab.classList.remove('active');
-		  })
+// 		  map.forEach(tab => {
+// 			 tab.classList.remove('active');
+// 		  })
 		
 		  
-		  content[index].classList.add('active');
-		  item[index].classList.add('active'); 
-		  map[index].classList.add('active'); 
+// 		  content[index].classList.add('active');
+// 		  item[index].classList.add('active'); 
+// 		  map[index].classList.add('active'); 
 		 
 		  
-	   })
-	})
- }
- tabChanger(tabBtn, tabMap, tabMapContent);
- const tabItemAdaptive = document.querySelectorAll(".sixth__item-more");
- const tabContentAdaptive = document.querySelectorAll(".sixth__feedback");
- const tabItem = document.querySelectorAll(".seventh__btn");
- const tabContent = document.querySelectorAll(".seventh__content");
+// 	   })
+// 	})
+//  }
+//  tabChanger(tabBtn, tabMap, tabMapContent);
+
+ const tabItem = document.querySelectorAll(".sixth__tab");
+ const tabContent = document.querySelectorAll(".sixth__content");
 
  function tabChangerAdaptive(item, content) {
 	item.forEach((tab, index) => {
@@ -395,8 +374,100 @@ $(".sixth__slider").slick({
 		})
 	})
 }
-tabChangerAdaptive(tabItemAdaptive, tabContentAdaptive);
 tabChangerAdaptive(tabItem, tabContent);
 
 
-	
+// Calculator
+
+const slider01 = document.querySelector(".slider01");
+const innerValue = document.querySelector(".result");
+const progress = document.querySelector(".point01");
+const screenWidth = window.screen.width;
+
+function customSlider() {
+	// const num =
+	//   (slider01.value * 3900 + slider02.value * 3700 + slider03.value * 3800) * slider04.value * 0.197;
+  
+	// const result = new Intl.NumberFormat("ru-RU").format(num);
+  
+	// innerValue.innerHTML = result;
+	// innerValue02.innerHTML = result;
+  
+	if(matchMedia){
+	  const matchResult = window.matchMedia("(max-width: 600px)");
+	  matchResult.addListener(changes);
+	  changes(matchResult);
+	  function changes(matchResult) {
+		if (matchResult.matches) {
+		  if (slider01.value === "0") {
+			progress.style.width = slider01.value  + "px";
+		  }
+		  if (slider01.value === "10") {
+			progress.style.width = 40 - slider01.value + "px";
+		  }
+		  if (slider01.value === "20") {
+			progress.style.width = 70 - slider01.value + "px";
+		  }
+		  if (slider01.value === "30") {
+			progress.style.width = 110 - slider01.value + "px";
+		  }
+		  if (slider01.value === "40") {
+			progress.style.width = 150 - slider01.value + "px";
+		  }
+		  if (slider01.value === "50") {
+			progress.style.width = 180 - slider01.value + "px";
+		  }
+		  if (slider01.value === "60") {
+			progress.style.width = 220 - slider01.value + "px";
+		  }
+		  if (slider01.value === "70") {
+			progress.style.width = 260 - slider01.value + "px";
+		  }
+		  if (slider01.value === "80") {
+			progress.style.width = 290 - slider01.value + "px";
+		  }
+		  if (slider01.value === "90") {
+			progress.style.width = 320 - slider01.value + "px";
+		  }
+		} else{
+		  if (slider01.value === "0") {
+			progress.style.width = slider01.value + "px";
+	  
+		  }
+		  if (slider01.value === "10") {
+			progress.style.width = 60 - slider01.value + "px";
+	  
+		  }
+		  if (slider01.value === "20") {
+			progress.style.width = 120 - slider01.value + "px";
+		  }
+		  if (slider01.value === "30") {
+			progress.style.width = 170 - slider01.value + "px";
+		  }
+		  if (slider01.value === "40") {
+			progress.style.width = 230 - slider01.value + "px";
+		  }
+		  if (slider01.value === "50") {
+			progress.style.width = 280 - slider01.value + "px";
+		  }
+		  if (slider01.value === "60") {
+			progress.style.width = 340 - slider01.value + "px";
+		  }
+		  if (slider01.value === "70") {
+			progress.style.width = 400 - slider01.value + "px";
+		  }
+		  if (slider01.value === "80") {
+			progress.style.width = 450 - slider01.value + "px";
+		  }
+		  if (slider01.value === "90") {
+			progress.style.width = 510 - slider01.value + "px";
+		  }
+		}
+	  }
+	}
+  }
+  customSlider();
+
+slider01.addEventListener("input", () => {
+  customSlider();
+});
